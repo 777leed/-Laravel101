@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $brandinuse = ['brand'=>'SDMN','sponsor'=>'PRIME'];
-    return view('welcome',$brandinuse);
+    $id=request("id");
+    return view('welcome',["id"=>$id]);
+});
+Route::get('/{id}', function ($id) {
+    return view('home',['id'=>$id]);
 });
