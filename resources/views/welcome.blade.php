@@ -10,7 +10,7 @@
             <div class="bannerItem">
                 <div class="box"> <img src="storage/image/play-button.png" alt="play-button" height="90" width="90"></div>
                 <div class="box_title">
-                    Resume
+                    Resume {{$id}}
                 </div>
                
             </div>
