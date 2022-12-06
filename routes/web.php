@@ -12,11 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    $id=request("id");
-    return view('welcome',["id"=>$id]);
-});
-Route::get('/{id}', function ($id) {
-    return view('home',['id'=>$id]);
-});
+$ptc = 'App\Http\Controllers\PageController';
+Route::get('/',$ptc.'@index');
+Route::get('/home',$ptc.'@home');
+Route::get('/library',$ptc.'@showLibrary');
